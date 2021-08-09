@@ -21,7 +21,7 @@ install(){
 			cd ..
 			
 			chmod +x burp-rest-api.sh
-			apt-update -y
+			apt update -y
 			if pgrep -x "Xvfb" > /dev/null
 			then
     				echo "Xvfb Running"
