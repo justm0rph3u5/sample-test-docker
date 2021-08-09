@@ -21,18 +21,18 @@ install(){
 			cd ..
 			
 			chmod +x burp-rest-api.sh
-			sudo apt-update -y
+			apt-update -y
 			if pgrep -x "Xvfb" > /dev/null
 			then
     				echo "Xvfb Running"
 				export DISPLAY=:99
 			else
     				echo "Stopped"
-				sudo apt install xvfb -y
+				apt install xvfb -y
                  		echo -e "Setting up in-memory display xvfb"
                  		Xvfb :99 &
                  		export DISPLAY=:99
-                 		sudo apt-get install libfontconfig1 libxrender1 -y
+                 		apt-get install libfontconfig1 libxrender1 -y
 			fi
                         
 			if ! python3 --version ; then
@@ -40,7 +40,7 @@ install(){
                                 exit 1
                         else
 				if command -v apt-get >/dev/null; then
-					sudo apt install python3-testresources -y
+					apt install python3-testresources -y
 					echo -e "apt-get is used for installing python3-testresources"
 				elif command -v yum >/dev/null; then
 
