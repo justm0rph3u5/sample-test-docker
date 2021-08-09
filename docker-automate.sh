@@ -92,8 +92,8 @@ if [[ "$_java" ]]; then
 fi
 if command -v apt-get >/dev/null; then
 	 if ! dpkg -s "python3-pip" >/dev/null 2>&1; then
-		 sudo apt update -y
-		 sudo apt-get install python3-pip -y
+		 apt update -y
+		 apt-get install python3-pip -y
 	fi
 elif command -v yum >/dev/null; then
 	echo "yum is used here"
