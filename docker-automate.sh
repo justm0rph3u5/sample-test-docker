@@ -33,6 +33,7 @@ install(){
                  		Xvfb :99 &
                  		export DISPLAY=:99
                  		apt-get install libfontconfig1 libxrender1 -y
+				apt-get install python3 -y
 			fi
                         
 			if ! python3 --version ; then
